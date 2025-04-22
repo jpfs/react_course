@@ -5,9 +5,11 @@ import TabButton from "./components/TabButton.jsx";
 import componentsImg from "./assets/components.png";
 
 function App() {
+  let tabContent = "please click a button";
+
   function handleSelect(selectButton) {
     // selectButton => "components, jxs, props, state"
-    console.log(selectButton);
+    tabContent = selectButton;
   }
 
   return (
@@ -51,7 +53,7 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          Dynamic Content
+          {tabContent}
         </section>
       </main>
     </div>
