@@ -8,7 +8,7 @@ import componentsImg from "./assets/components.png";
 import { EXAMPLES } from "./data.js";
 
 function App() {
-  cons[(selectedTopic, setSelectedTopic)] = useState("components");
+  const [selectedTopic, setSelectedTopic] = useState("components");
 
   function handleSelect(selectButton) {
     // selectButton => "components, jxs, props, state"
@@ -27,8 +27,7 @@ function App() {
             <CoreConcept
               title="Components"
               description="The core UI building block"
-              ima
-              ge={componentsImg}
+              image={componentsImg}
             />
             <CoreConcept
               title={CORE_CONCEPTS[1].title}
