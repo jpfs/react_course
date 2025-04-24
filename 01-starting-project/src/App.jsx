@@ -53,7 +53,7 @@ function App() {
             <TabButton onSelect={() => handleSelect("components")}>
               Components
             </TabButton>
-            <TabButton onSelect={() => handleSelect("jxs")}>JXS</TabButton>
+            <TabButton onSelect={() => handleSelect("JSX")}>JSX</TabButton>
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
