@@ -8,12 +8,19 @@ import componentsImg from "./assets/components.png";
 import { EXAMPLES } from "./data.js";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("components");
+  const [selectedTopic, setSelectedTopic] = useState("");
+  // const [selectedTopic, setSelectedTopic] = useState("NULL");
 
   function handleSelect(selectButton) {
     // selectButton => "components, jxs, props, state"
     setSelectedTopic(selectButton);
     //console.log(selectedTopic);
+
+    //let tabContent = <p> Please select a topic. </p>;
+    //if(selectedTopic) {
+    //tabContent=  THE ALL DIV FROM THE EXAMPLES;
+    //ITS ANOTHER WAY OF WRITING IT
+    //}
   }
 
   return (
@@ -57,13 +64,18 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
-          </div>
+          {/* or{selectedTopic === undefined <p>Please select a topic.</p> : null}*/}
+          {/* or{!selectedTopic && <p>Please select a topic.</p>}*/}
+          {!selectedTopic ? <p>Please select a topic.</p> : null}
+          {selectedTopic ? (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>{EXAMPLES[selectedTopic].code}</code>
+              </pre>
+            </div>
+          ) : null}
         </section>
       </main>
     </div>
