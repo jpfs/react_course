@@ -12,7 +12,7 @@ function App() {
   function handleSelect(selectButton) {
     // selectButton => "components, jxs, props, state"
     setSelectedTopic(selectButton);
-    console.log(selectedTopic);
+    //console.log(selectedTopic);
   }
 
   return (
@@ -26,7 +26,8 @@ function App() {
             <CoreConcept
               title="Components"
               description="The core UI building block"
-              image={componentsImg}
+              ima
+              ge={componentsImg}
             />
             <CoreConcept
               title={CORE_CONCEPTS[1].title}
